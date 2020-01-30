@@ -9,3 +9,4 @@ export const GEOLOCATION_OPTIONS = {
     // 27 seconds
     timeout: 27000,
 };
+export const POSITION_NOISE = 0.02;
