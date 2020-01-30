@@ -1,5 +1,6 @@
 import React from 'react';
-import { Tabs, Button, Spin } from 'antd';
+import { Tabs, Spin } from 'antd';
+import { CreatePostButton } from './CreatePostButton';
 import { Gallery } from './Gallery';
 import {
     GEOLOCATION_OPTIONS,
@@ -121,7 +122,7 @@ export class Home extends React.Component {
     }
 
     render() {
-        const operations = <Button>Create New Post</Button>;
+        const operations = <CreatePostButton />;
         return (
             <Tabs tabBarExtraContent={operations} className="main-tabs">
                 <TabPane tab="Image Posts" key="1">
@@ -136,4 +137,4 @@ export class Home extends React.Component {
             </Tabs>
         );
     }
-};
+}
