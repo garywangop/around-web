@@ -25,6 +25,7 @@ export class Home extends React.Component {
             loadingGeolocation: true,
             error: null,
         });
+        // Check if browser supports geolocation
         if ('geolocation' in navigator) {
             navigator.geolocation.getCurrentPosition(
                 this.onGeolocationSuccess,
@@ -59,7 +60,7 @@ export class Home extends React.Component {
 
     loadNearbyPost(
         position = JSON.parse(localStorage.getItem(POSITION_KEY)),
-        range = 20,
+        range = 20000,
     ) {
         this.setState({
             loadingPosts: true,
